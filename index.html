@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <header class="title-box">
+    <h1>
+      <span class="title-main">SPLI</span>
+      <span class="title-sub">TTER</span>
+    </h1>
+  </header>
+  <main class="app-container">
+
+    <form class="form-box">
+      <fieldset class="bill-box">
+        <label for="bill-total">Bill</label>
+        <!-- <i class="fa-solid fa-dollar-sign"></i> -->
+        <input class="number-input" id="bill-total" type="number" step=0.01 placeholder="0">
+      </fieldset>
+      <fieldset class="tips-box">
+        <label for="custom-tip">Select Tip %</label>
+
+        <div class="tips-grid">
+          <input type="button" value="5%" class="btn btn-5">
+          <input type="button" value="10%" class="btn btn-10">
+          <input type="button" value="15%" class="btn btn-15">
+          <input type="button" value="25%" class="btn btn-25">
+          <input type="button" value="50%" class="btn btn-50">
+          <input type="number" placeholder="Custom" class="number-input btn btn-custom" id="custom-tip">
+        </div>
+      </fieldset>
+      <fieldset class="divisor-box">
+        <div class="divisor-inline">
+          <label for="divisor-total">Number of People</label>
+          <p class="error-msg hidden">Can't be zero</p>
+        </div>
+        <!-- <i class="fa-solid fa-user"></i> -->
+        <input class="number-input" id="divisor-total" type="number" placeholder="0">
+
+      </fieldset>
+    </form>
+    
+    <section class="result-box">
+      <div class="results-grid">
+        <h2 class="tip-label">
+          <span class="result-label-main">Tip Amount</span>
+          <span class="result-label-sub">/ person</span>
+        </h2>
+
+        <strong class="result tip-result">$0.00</strong>
+
+        <h2 class="total-label">
+          <span class="result-label-main">Total</span>
+          <span class="result-label-sub">/ person</span>
+        </h2>
+
+        <strong class="result total-result">$0.00</strong>
+      </div>
+      <button class="btn reset" disabled>Reset</button>
+    </section>
+
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a class="nav-item" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+        Mentor</a>
+      Coded by <a class="nav-item" href="https://github.com/Arnold927" target="_blank">Arnold Omondi</a>
+    </p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>
